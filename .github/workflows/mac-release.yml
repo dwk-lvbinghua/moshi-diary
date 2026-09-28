@@ -1,0 +1,43 @@
+name: Build macOS App
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'desktop/**'
+      - '.github/workflows/mac-release.yml'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        arch: [x64, arm64]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Stage web assets into desktop shell
+        run: cp -R app desktop/app
+
+      - name: Install dependencies
+        working-directory: desktop
+        run: npm install --no-audit --no-fund
+
+      - name: Build macOS app (${{ matrix.arch }})
+        working-directory: desktop
+        run: npx electron-builder --mac --${{ matrix.arch }} --publish never
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-${{ matrix.arch }}
+          path: desktop/release/*.dmg
+          if-no-files-found: error

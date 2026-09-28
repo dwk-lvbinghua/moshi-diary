@@ -1,0 +1,57 @@
+{
+  "name": "moshi-diary",
+  "version": "1.2.0",
+  "description": "墨室 · 时光档案 - 时光胶囊日记本",
+  "author": "Moshi Studio",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable",
+    "build:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.moshi.diary",
+    "productName": "时光胶囊日记本",
+    "electronVersion": "33.4.11",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "MoshiDiary_${version}_x64.${ext}"
+    },
+    "mac": {
+      "icon": "icon.icns",
+      "category": "public.app-category.productivity",
+      "identity": null,
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "artifactName": "MoshiDiary_${version}_mac_${arch}.${ext}"
+    },
+    "dmg": {
+      "title": "时光胶囊日记本 ${version}"
+    },
+    "portable": {
+      "artifactName": "MoshiDiary_${version}_x64.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}

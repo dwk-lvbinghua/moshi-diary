@@ -1,0 +1,28 @@
+# Local Netlify folder
+.netlify
+
+# Node
+node_modules/
+
+# Capacitor 生成产物（CI 每次 npx cap sync 重新生成）
+android/app/src/main/assets/public/
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/capacitor-cordova-android-plugins/
+
+# Electron 构建产物与依赖（源码在 /app 与 /desktop，构建产物走 Releases）
+desktop/node_modules/
+desktop/app/
+desktop/release/
+desktop/.cache/
+
+# 签名密钥（只放 GitHub Secrets，不入库）
+*.keystore
+*.jks
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+.mimosa/

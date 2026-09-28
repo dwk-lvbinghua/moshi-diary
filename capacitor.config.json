@@ -1,0 +1,11 @@
+{
+  "appId": "com.moshi.diary",
+  "appName": "时光胶囊日记本",
+  "webDir": "app",
+  "android": {
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}
