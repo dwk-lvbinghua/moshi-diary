@@ -43,10 +43,10 @@
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-big" id="download-top"
-             href="https://github.com/dwk-lvbinghua/moshi-diary/releases/latest/download/MoshiDiary_1.1.0_x64.exe">免费下载 Windows 版</a>
-          <a class="btn btn-ghost btn-big" href="#features">了解它</a>
+             href="https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_x64.exe">免费下载 Windows 版</a>
+          <a class="btn btn-ghost btn-big" href="#download">其他平台</a>
         </div>
-        <div class="hero-meta">v1.1.0 · Windows 10 / 11 x64 · 约 71MB · 免费 · 无需注册，打开即写</div>
+        <div class="hero-meta">v1.2.0 · Windows / Android 已发布 · macOS 即将上线 · 免费 · 无需注册</div>
       </div>
       <div class="letter-scene" aria-hidden="true">
         <div class="letter">
@@ -153,12 +153,16 @@
           <p>非常重要：开启密码锁后数据为高强度加密，<strong>当前版本忘记密码无法找回数据</strong>，请务必牢记密码。恢复码机制已在开发计划中。</p>
         </details>
         <details>
-          <summary>首次运行提示 SmartScreen 拦截？</summary>
-          <p>点击「更多信息 → 仍要运行」即可。我们正在接入代码签名证书以彻底消除这一提示。</p>
+          <summary>首次运行提示 SmartScreen / 安全提示拦截？</summary>
+          <p>Windows：点击「更多信息 → 仍要运行」；macOS：在应用上<strong>右键 → 打开</strong>（应用未做公证，直接双击会被拦）；Android：安装时允许「安装未知应用」。我们正在接入代码签名证书以彻底消除这些提示。</p>
+        </details>
+        <details>
+          <summary>Android 安装需要注意什么？</summary>
+          <p>APK 直装需要系统允许：安装时点击「仍要安装 / 允许安装未知应用」即可。应用不申请网络权限，数据只存在手机本地。</p>
         </details>
         <details>
           <summary>有 Mac 版或手机版吗？</summary>
-          <p>在规划中，优先级取决于大家的呼声——欢迎通过页脚邮箱告诉我们你最需要的平台。</p>
+          <p><strong>Android 版已发布</strong>，见上方下载区。macOS 版已完成适配，即将发布；iOS 版在规划中——欢迎通过 Issue 告诉我们你的期待。</p>
         </details>
       </div>
     </div>
@@ -172,6 +176,16 @@
         <h2>更新日志</h2>
       </div>
       <div class="changelog">
+        <div class="ver">
+          <h4>v1.2.0</h4>
+          <div class="date">2026 · 09</div>
+          <ul>
+            <li>新平台：Android 版正式发布，手机与电脑数据可用导出文件互迁</li>
+            <li>导出档案现在把图片一并打包，跨设备迁移不再丢图</li>
+            <li>Android：本地文件存储、密码锁、胶囊到期通知、分享导出，与桌面版同等能力</li>
+            <li>Windows / Android 统一 v1.2.0，macOS 版即将发布</li>
+          </ul>
+        </div>
         <div class="ver">
           <h4>v1.1.0</h4>
           <div class="date">2026 · 09</div>
@@ -200,10 +214,34 @@
   <section class="block download-band" id="download">
     <div class="wrap">
       <h2>今晚，就写第一篇</h2>
-      <p class="sub">下载到本地即可使用，无需注册，无需联网。</p>
-      <a class="btn btn-primary btn-big"
-         href="https://github.com/dwk-lvbinghua/moshi-diary/releases/latest/download/MoshiDiary_1.1.0_x64.exe">下载 Windows 版（免费）</a>
-      <div class="meta">v1.1.0 · Windows 10 / 11 x64 · 约 71MB · SHA-256 校验文件见 Release 页</div>
+      <p class="sub">下载到本地即可使用，无需注册，无需联网。数据只存在你自己的设备上。</p>
+      <div class="cards" style="text-align:left;margin-top:28px">
+        <div class="card">
+          <div class="icon">🖥️</div>
+          <h3>Windows</h3>
+          <p>Windows 10 / 11 x64<br>v1.2.0 · 约 71MB · 免安装</p>
+          <a class="btn btn-primary btn-block" style="margin-top:12px"
+             href="https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_x64.exe">下载 Windows 版</a>
+        </div>
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>Android</h3>
+          <p>Android 6.0 及以上<br>v1.2.0 · 约 3MB · APK 直装</p>
+          <a class="btn btn-primary btn-block" style="margin-top:12px"
+             href="https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0.apk">下载 Android 版</a>
+        </div>
+        <div class="card" style="opacity:.85">
+          <div class="icon">🍎</div>
+          <h3>macOS</h3>
+          <p>macOS 10.15+ · Apple Silicon / Intel<br>已完成适配 · 即将发布</p>
+          <a class="btn btn-ghost btn-block" style="margin-top:12px"
+             href="https://github.com/dwk-lvbinghua/moshi-diary/releases">关注 Releases</a>
+        </div>
+      </div>
+      <div class="meta" style="margin-top:18px">
+        所有产物均在 <a href="https://github.com/dwk-lvbinghua/moshi-diary/releases" style="text-decoration:underline">GitHub Releases</a> 页，
+        附 SHA-256 校验值（SHA256SUMS.txt）。Android 安装需允许「安装未知应用」。
+      </div>
     </div>
   </section>
 

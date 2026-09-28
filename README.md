@@ -63,17 +63,22 @@
 
 | 项目 | 说明 |
 | --- | --- |
-| 最新版本 | v1.1.0（2026-09） |
-| 系统要求 | Windows 10 / 11 x64 |
-| 安装包大小 | 约 71 MB |
+| 最新版本 | v1.2.0（2026-09） |
+| Windows | Windows 10 / 11 x64 · 免安装 · 约 71 MB |
+| Android | Android 6.0+ · APK 直装 · 约 3 MB |
+| macOS | 已完成适配，即将发布 |
 | 价格 | 免费 |
 
-**[⬇️ 前往 Releases 页下载](https://github.com/dwk-lvbinghua/moshi-diary/releases/latest)**（也可[直接下载最新安装包](https://github.com/dwk-lvbinghua/moshi-diary/releases/latest/download/MoshiDiary_1.1.0_x64.exe)）
+**[⬇️ 前往 Releases 页下载](https://github.com/dwk-lvbinghua/moshi-diary/releases/latest)**，或直接下载：
 
-下载后无需安装、无需注册，双击即用。如需校验安装包完整性，SHA-256 为：
+- Windows：[MoshiDiary_1.2.0_x64.exe](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_x64.exe)
+- Android：[MoshiDiary_1.2.0.apk](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0.apk)
+
+下载后无需注册，双击即用（Android 需允许「安装未知应用」）。校验值见 Release 页的 `SHA256SUMS.txt`，当前版本：
 
 ```
-06322f71bc756ac4f4f044cd8204af3d6310f0dd49463d8e8b73a333f0c6b9bf
+84f975f45167aa9aff1b39eb69e11d710a6cbda79c8f2f7b6660ad6e94482280  MoshiDiary_1.2.0_x64.exe
+a31c4bb2d37b6fa96e09abfe71e7f34dd2284baf5821c952fd76992abc485635  MoshiDiary_1.2.0.apk
 ```
 
 > 💡 首次运行如遇 SmartScreen 拦截，点击「更多信息 → 仍要运行」即可。我们正在接入代码签名证书以彻底消除这一提示。
@@ -84,7 +89,7 @@
 当前版本的全部功能免费。未来推出的增值服务（如多设备同步等）会另行收费，但本地写作体验承诺永远免费，已导出的数据也永远可以打开。
 
 **换了电脑怎么办？**
-在旧电脑「设置 → 导出数据」得到一个 JSON 档案，在新电脑上「导入数据」即可完整迁移日记与胶囊。
+在旧电脑「设置 → 导出数据」得到一个 JSON 档案（图片会一并打包），在新电脑或手机上「导入数据」即可完整迁移日记与胶囊。Windows / Android 通用。
 
 **忘记密码怎么办？**
 ⚠️ 非常重要：开启密码锁后数据为高强度加密，**当前版本忘记密码无法找回数据**，请务必牢记密码。恢复码机制已在开发计划中。
@@ -95,6 +100,13 @@
 更多问题见[官网 FAQ](https://moshi-diary.netlify.app/#faq)。
 
 ## 📝 更新日志
+
+### v1.2.0 · 2026-09
+
+- 新平台：Android 版正式发布（本地文件存储、密码锁、胶囊通知、分享导出，与桌面版同等能力）
+- 导出档案把图片一并打包，Windows / Android 之间互迁不再丢图
+- 数据格式三端互通：导出 JSON 即可在任一平台导入
+- macOS 版已完成适配，即将发布
 
 ### v1.1.0 · 2026-09
 
@@ -122,7 +134,7 @@
 └── assets/          图标等静态资源
 ```
 
-- 应用本体基于 Electron 构建，通过 [Releases](https://github.com/dwk-lvbinghua/moshi-diary/releases) 分发；
+- 应用本体基于 Electron（Windows / macOS）与 Capacitor（Android）构建，通过 [Releases](https://github.com/dwk-lvbinghua/moshi-diary/releases) 分发；
 - 使用问题、功能建议、平台需求（Mac / 手机版）欢迎提 [Issue](https://github.com/dwk-lvbinghua/moshi-diary/issues)。
 
 ---
