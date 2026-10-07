@@ -65,23 +65,27 @@
 | --- | --- |
 | 最新版本 | v1.2.0（2026-09） |
 | Windows | Windows 10 / 11 x64 · 免安装 · 约 71 MB |
+| macOS | macOS 10.15+ · Apple Silicon / Intel · 约 94 / 99 MB |
 | Android | Android 6.0+ · APK 直装 · 约 3 MB |
-| macOS | 已完成适配，即将发布 |
 | 价格 | 免费 |
 
 **[⬇️ 前往 Releases 页下载](https://github.com/dwk-lvbinghua/moshi-diary/releases/latest)**，或直接下载：
 
 - Windows：[MoshiDiary_1.2.0_x64.exe](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_x64.exe)
+- macOS（M 系列）：[MoshiDiary_1.2.0_mac_arm64.dmg](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_mac_arm64.dmg)
+- macOS（Intel）：[MoshiDiary_1.2.0_mac_x64.dmg](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0_mac_x64.dmg)
 - Android：[MoshiDiary_1.2.0.apk](https://github.com/dwk-lvbinghua/moshi-diary/releases/download/v1.2.0/MoshiDiary_1.2.0.apk)
 
-下载后无需注册，双击即用（Android 需允许「安装未知应用」）。校验值见 Release 页的 `SHA256SUMS.txt`，当前版本：
+下载后无需注册，双击即用（Android 需允许「安装未知应用」，macOS 首次打开请右键 →「打开」）。校验值见 Release 页的 `SHA256SUMS.txt`，当前版本：
 
 ```
 84f975f45167aa9aff1b39eb69e11d710a6cbda79c8f2f7b6660ad6e94482280  MoshiDiary_1.2.0_x64.exe
+8c7fb3f3e8d17bcb1f3c8f06559f1fd6a0f04fd23fbd7d8d010afc3fdd24a298  MoshiDiary_1.2.0_mac_arm64.dmg
+8776cc5850cb3a50301b4cc3399a5d853e6ef45f80da9872db00930227d08105  MoshiDiary_1.2.0_mac_x64.dmg
 a31c4bb2d37b6fa96e09abfe71e7f34dd2284baf5821c952fd76992abc485635  MoshiDiary_1.2.0.apk
 ```
 
-> 💡 首次运行如遇 SmartScreen 拦截，点击「更多信息 → 仍要运行」即可。我们正在接入代码签名证书以彻底消除这一提示。
+> 💡 首次运行如遇 SmartScreen（Windows）或 Gatekeeper（macOS）拦截，Windows 点「更多信息 → 仍要运行」，macOS 在应用上右键 →「打开」。我们正在接入代码签名证书以彻底消除这些提示。
 
 ## ❓ 常见问题
 
@@ -103,10 +107,10 @@ a31c4bb2d37b6fa96e09abfe71e7f34dd2284baf5821c952fd76992abc485635  MoshiDiary_1.2
 
 ### v1.2.0 · 2026-09
 
-- 新平台：Android 版正式发布（本地文件存储、密码锁、胶囊通知、分享导出，与桌面版同等能力）
-- 导出档案把图片一并打包，Windows / Android 之间互迁不再丢图
+- 新平台：macOS（Apple Silicon / Intel）与 Android 版正式发布
+- 导出档案把图片一并打包，三平台之间互迁不再丢图
 - 数据格式三端互通：导出 JSON 即可在任一平台导入
-- macOS 版已完成适配，即将发布
+- Windows / macOS / Android 三端统一 v1.2.0
 
 ### v1.1.0 · 2026-09
 

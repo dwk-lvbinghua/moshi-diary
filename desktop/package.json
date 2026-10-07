@@ -35,12 +35,7 @@
       "icon": "icon.icns",
       "category": "public.app-category.productivity",
       "identity": null,
-      "target": [
-        {
-          "target": "dmg",
-          "arch": ["x64", "arm64"]
-        }
-      ],
+      "target": ["dmg"],
       "artifactName": "MoshiDiary_${version}_mac_${arch}.${ext}"
     },
     "dmg": {
