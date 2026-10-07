@@ -40,6 +40,9 @@ jobs:
         run: echo "${{ secrets.ANDROID_KEYSTORE_B64 }}" | base64 -d > android/moshi.keystore
 
       - name: Build release APK
+        env:
+          MOSHI_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          MOSHI_KEY_PASS: ${{ secrets.ANDROID_KEY_PASS }}
         run: |
           cd android
           chmod +x gradlew
